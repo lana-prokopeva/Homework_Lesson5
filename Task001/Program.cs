@@ -13,20 +13,22 @@ int GetCountEventNumbers(int [] array)
         if(array[i]%2 == 0) 
         {
             count = count + 1;
-            Console.WriteLine($"{array[i]} ");
+            Console.Write($"{array[i]} ");
         }
     }
     return count;
 }
 
 // Задаем массив
-int [] RandomeNumbers = new int [10];
+Console.WriteLine("Массив: ");
+int [] RandomNumbers = new int [10];
 var random = new Random();
-for(int i = 0; i < RandomeNumbers.Length; i++)
+for(int i = 0; i < RandomNumbers.Length; i++)
 {
-    RandomeNumbers[i] = random.Next(100, 1000);
-    Console.Write($"{RandomeNumbers[i]} ");
+    RandomNumbers[i] = random.Next(100, 1000);
+    Console.Write($"{RandomNumbers[i]} ");
 }
 
-int CountEventNumbers = GetCountEventNumbers(RandomeNumbers);
-Console.WriteLine($"Количество положительных чисел в массиве = {CountEventNumbers}");
+int CountEventNumbers = GetCountEventNumbers(RandomNumbers);
+Console.WriteLine();
+Console.Write($"Количество положительных чисел в массиве = {CountEventNumbers}");
